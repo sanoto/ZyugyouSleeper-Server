@@ -6,4 +6,5 @@ from .models import User
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('user_id', 'name', 'felica_id')
+    search_fields = ['name']

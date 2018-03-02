@@ -25,7 +25,7 @@ SECRET_KEY = '61(b)12=vwp3!2yn1qy5154lnsg+-@(1ef!ypa&&=nivud8z&_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["192.168.1.219"]
+ALLOWED_HOSTS = ["192.168.1.219", "localhost"]
 
 
 # Application definition
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'ZyugyouSleeper.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
