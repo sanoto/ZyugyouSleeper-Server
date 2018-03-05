@@ -1,5 +1,6 @@
 from django.conf.urls import url, include
 from django.contrib import admin
+from rest_framework_jwt.views import obtain_jwt_token
 
 from rest_framework import routers
 from moneymanager.views import UserViewSet
@@ -10,4 +11,5 @@ router.register(r'users', UserViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),
+    url(r'^token/', obtain_jwt_token),
 ]
